@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EcoMonitor Frontend
 
-## Getting Started
+## Overview
+This is the frontend application for the EcoMonitor project, built with Next.js and Flutter. It provides a user-friendly interface for environmental monitoring, carbon footprint tracking, and compliance reporting.
 
-First, run the development server:
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- Real-time environmental data visualization
+- Carbon footprint data entry and display
+- User authentication and management
+- Responsive design for desktop and mobile access
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology Stack
+- **Frontend:** Next.js
+- **Mobile:** Flutter
+- **State Management:** React Hooks
+- **Styling:** CSS Modules
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```markdown
+ecomonitor-frontend/
+├── public/
+│   ├── next.svg
+│   ├── vercel.svg
+│   ├── background.jpg
+├── src/
+│   ├── app/
+│   │   ├── services/
+│   │   │   ├── apiClient.ts
+│   │   │   ├── displayCarbon.tsx
+│   │   │   ├── addCarbonFootprint.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.module.css
+│   │   ├── page.tsx
+│   ├── pages/
+│   │   ├── api/
+│   │   │   ├── hello.ts
+│   ├── components/
+│   ├── styles/
+├── .env
+├── .eslintrc.json
+├── .gitignore
+├── next.config.mjs
+├── package.json
+├── README.md
 
-## Learn More
+### Installation
+1. install dependencies:
+   ```bash
+   npm install
 
-To learn more about Next.js, take a look at the following resources:
+2. Set up environment variables:
+   ```bash
+   NEXT_PUBLIC_API_URL=http://localhost:5000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Start the application:
+   ```bash
+   npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Run tests:
+   ```bash
+   npm run test
 
-## Deploy on Vercel
+## Usage
+Access the frontend at [http://localhost:3000](http://localhost:3000)
+Ensure the backend service is running at [http://localhost:5000](http://localhost:5000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
+
