@@ -1,16 +1,9 @@
-"use client";
+import CarbonFootprintPage from './services/displayCarbon';
 
-import React from 'react';
-import DisplayCarbon from './services/displayCarbon';
-import styles from './page.module.css';
-
-const Home: React.FC = () => {
+export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1>Welcome to ESG Monitor</h1>
-      <DisplayCarbon />
+    <main>
+      <CarbonFootprintPage />
     </main>
   );
-};
-
-export default Home;
+}
