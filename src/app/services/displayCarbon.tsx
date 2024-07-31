@@ -5,7 +5,7 @@ import apiClient from './apiClient';
 import AddCarbonFootprint from './addCarbonFootprint';
 
 const CarbonFootprintPage = () => {
-  const [data, setData] = useState<{ name: string; value: number }[]>([]);
+  const [data, setData] = useState<{ name: string; value: number; unit: string; date: string }[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -28,7 +28,9 @@ const CarbonFootprintPage = () => {
       {error && <p>{error}</p>}
       <ul>
         {data.map((item, index) => (
-          <li key={index}>{item.name}: {item.value}</li>
+          <li key={index}>
+            {item.name}: {item.value} {item.unit} on {new Date(item.date).toLocaleDateString()}
+          </li>
         ))}
       </ul>
       <AddCarbonFootprint />
