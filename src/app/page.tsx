@@ -1,4 +1,4 @@
-import CarbonFootprintPage from './services/displayCarbon';
+import CarbonFootprintPage from './components/displayCarbon';
 
 export default function Home() {
   return (
