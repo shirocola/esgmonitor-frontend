@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import apiClient from './apiClient';
-import AddCarbonFootprint from './addCarbonFootprint';
+import apiClient from '../services/apiClient';
+import AddCarbonFootprint from '../services/addCarbonFootprint';
 
 const CarbonFootprintPage = () => {
   const [data, setData] = useState<{ name: string; value: number; unit: string; date: string }[]>([]);
