@@ -12,7 +12,7 @@ const AddCarbonFootprint = () => {
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     try {
-      await apiClient.post('/carbon-footprint', { name, value: Number(value), unit, date });
+      await apiClient.post('/api/carbon-footprint', { name, value: Number(value), unit, date });
       // Optionally refresh the data or clear the form
       setName('');
       setValue('');

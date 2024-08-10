@@ -11,7 +11,13 @@ const CarbonFootprintPage = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await apiClient.get('/carbon-footprint');
+        // Assuming you want to fetch historical data, update the URL to match your API's endpoint
+        const response = await apiClient.get('/api/carbon-footprint/history', {
+          params: {
+            startDate: '2023-01-01', // Example: Fetching data for a specific date range
+            endDate: '2023-01-31',
+          },
+        });
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
