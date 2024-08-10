@@ -36,7 +36,7 @@ const HistoricalCarbonFootprint = () => {
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await apiClient.get("/carbon-footprint/history", {
+      const response = await apiClient.get("api/carbon-footprint/history", {
         params: { startDate, endDate },
       });
       setData(response.data);
